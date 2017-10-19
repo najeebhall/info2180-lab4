@@ -5,10 +5,6 @@ window.onload = function () {
 	var start = document.getElementById("start");
 	var leave = document.getElementById("maze");
 	start.addEventListener('click', function() {startGame(walls)});
-	//for (var i = 0; i < walls.length; i++)
-	//{
-		//wal.addEventListener("mouseleave", function () {lose(walls)});
-	//}
 	var end = document.getElementById("end");
 	wall.addEventListener('mouseover', function()
 		{ this.setAttribute('class', 'boundary youlose')
