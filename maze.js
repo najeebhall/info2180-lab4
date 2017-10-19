@@ -3,7 +3,12 @@ window.onload = function () {
 	var walls = document.querySelectorAll(".boundary");
 	var wall = document.getElementById("boundary1");
 	var start = document.getElementById("start");
+	var leave = document.getElementById("maze");
 	start.addEventListener('click', function() {startGame(walls)});
+	//for (var i = 0; i < walls.length; i++)
+	//{
+		//wal.addEventListener("mouseleave", function () {lose(walls)});
+	//}
 	var end = document.getElementById("end");
 	wall.addEventListener('mouseover', function()
 		{ this.setAttribute('class', 'boundary youlose')
@@ -12,6 +17,7 @@ window.onload = function () {
 		walls[i].addEventListener("mouseover",function(){lose(walls)});
 	}
 	end.addEventListener("mouseover",function(){endGame(walls)});
+	leave.addEventListener("mouseleave", function () {lose(walls)});
 	
 };
 function lose(elem){
