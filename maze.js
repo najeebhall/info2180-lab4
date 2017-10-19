@@ -19,13 +19,15 @@ function lose(elem){
 	for (var i = 0; i < elem.length; i++) {
 		elem[i].setAttribute("class","boundary youlose");
 	}
+	document.getElementById("status").innerHTML="You lose";
+
 }
 
 function endGame(elem)
 {
 	var status = elem[0].getAttribute('class');
 	if (status=== 'boundary') {
-			alert('you win!');
+			document.getElementById("status").innerHTML="You Win!";
 	}
 }
 
